@@ -63,7 +63,7 @@ public class ScheduleDAO extends Database {
 		String sql = "INSERT INTO SCHEDULE (SCHEDULE_ID, TITLE, MEMO, START_DT, END_DT) "
 				+ " VALUES(?, ?, ?, ?, ?)";
 
-		List params = new ArrayList();
+		List<Object> params = new ArrayList<>();
 		params.add(schedule.getScheduleId());
 		params.add(schedule.getTitle());
 		params.add(schedule.getMemo());
@@ -84,7 +84,7 @@ public class ScheduleDAO extends Database {
 				+ "START_DT = ?, END_DT = ? "
 				+ "WHERE SCHEDULE_ID = ?";
 
-		List params = new ArrayList();
+		List<Object> params = new ArrayList<>();
 		params.add(schedule.getTitle());
 		params.add(schedule.getMemo());
 		params.add(schedule.getStartDt());
@@ -105,7 +105,7 @@ public class ScheduleDAO extends Database {
 
 		String sql = "DELETE FROM SCHEDULE WHERE SCHEDULE_ID = ?";
 
-		List params = new ArrayList();
+		List<Object> params = new ArrayList<>();
 		params.add(scheduleId);
 
 		int result = executeSql(connection, sql, params);
