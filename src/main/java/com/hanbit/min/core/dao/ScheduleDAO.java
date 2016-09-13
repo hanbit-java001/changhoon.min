@@ -53,7 +53,6 @@ public class ScheduleDAO {
 		catch (Exception e) {
 			e.printStackTrace();
 		}
-
 		return result;
 	}
 
