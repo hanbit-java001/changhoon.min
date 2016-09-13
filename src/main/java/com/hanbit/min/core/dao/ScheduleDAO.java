@@ -9,7 +9,7 @@ import java.util.List;
 import com.hanbit.min.core.vo.ScheduleVO;
 
 
-public class ScheduleDAO extends Database {
+public class ScheduleDAO {
 
 	private Connection getConnection() {
 		String url = "jdbc:oracle:thin:@127.0.0.1/xe";
